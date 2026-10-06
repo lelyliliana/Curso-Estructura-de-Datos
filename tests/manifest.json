@@ -1,0 +1,18 @@
+[
+  "modulo01/09-busqueda-binaria",
+  "modulo02/04-eliminar-nodos",
+  "modulo02/06-listas-circulares",
+  "modulo02/07-listas-dobles",
+  "modulo02/08-pila-con-arreglo",
+  "modulo02/09-pila-con-nodos",
+  "modulo02/10-dos-pilas-compartidas",
+  "modulo02/11-cola-circular-con-arreglo",
+  "modulo02/12-cola-con-nodos",
+  "modulo02/13-deque-y-aplicaciones",
+  "modulo03/01-recursividad-y-caso-base",
+  "modulo03/05-buscar-y-eliminar-en-bst",
+  "modulo05/04-incidencia-y-multilistas",
+  "modulo05/05-dfs",
+  "modulo05/06-bfs-y-ruta-minima",
+  "modulo05/07-componentes-y-comprobacion"
+]

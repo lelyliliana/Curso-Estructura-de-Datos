@@ -1,0 +1,3 @@
+[v0, v1, v2, v3, v4]
+capacidad=8, copias=4
+[v0, v1, v3, v4]

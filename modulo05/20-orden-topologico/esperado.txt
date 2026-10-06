@@ -1,0 +1,2 @@
+[0, 1, 2, 3]
+Ciclo dirigido: no existe orden topológico

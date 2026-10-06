@@ -1,0 +1,403 @@
+{
+  "title": "Estructuras de Datos desde los fundamentos",
+  "lessons": 71,
+  "modules": [
+    {
+      "number": 1,
+      "title": "Fundamentos, contratos y arreglos",
+      "path": "modulo01",
+      "lessons": [
+        {
+          "m": 1,
+          "ruta": "modulo01/01-tipos-abstractos",
+          "titulo": "Tipos abstractos y representaciones"
+        },
+        {
+          "m": 1,
+          "ruta": "modulo01/02-referencias-y-memoria",
+          "titulo": "Referencias, alias y memoria en Java"
+        },
+        {
+          "m": 1,
+          "ruta": "modulo01/03-arreglos-y-region-activa",
+          "titulo": "Arreglos y región activa"
+        },
+        {
+          "m": 1,
+          "ruta": "modulo01/04-arreglo-dinamico",
+          "titulo": "Implementar un arreglo dinámico"
+        },
+        {
+          "m": 1,
+          "ruta": "modulo01/05-genericos-y-vistas",
+          "titulo": "Genéricos, identidad, igualdad y vistas"
+        },
+        {
+          "m": 1,
+          "ruta": "modulo01/06-complejidad",
+          "titulo": "Costos, mejor caso y peor caso"
+        },
+        {
+          "m": 1,
+          "ruta": "modulo01/07-amortizacion",
+          "titulo": "Crecimiento geométrico y costo amortizado"
+        },
+        {
+          "m": 1,
+          "ruta": "modulo01/08-contratos-e-invariantes",
+          "titulo": "Invariantes y oráculos de comprobación"
+        },
+        {
+          "m": 1,
+          "ruta": "modulo01/09-busqueda-binaria",
+          "titulo": "Búsqueda binaria y precondición de orden"
+        },
+        {
+          "m": 1,
+          "ruta": "modulo01/10-colecciones-y-eleccion",
+          "titulo": "List, Set y Map: elegir por operación"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Listas, pilas, colas y deques",
+      "path": "modulo02",
+      "lessons": [
+        {
+          "m": 2,
+          "ruta": "modulo02/01-nodo-simple",
+          "titulo": "Nodo simple y cadena"
+        },
+        {
+          "m": 2,
+          "ruta": "modulo02/02-crear-e-insertar",
+          "titulo": "Lista simple: crear e insertar"
+        },
+        {
+          "m": 2,
+          "ruta": "modulo02/03-buscar-y-actualizar",
+          "titulo": "Lista simple: búsqueda y actualización"
+        },
+        {
+          "m": 2,
+          "ruta": "modulo02/04-eliminar-nodos",
+          "titulo": "Lista simple: eliminación y casos extremos"
+        },
+        {
+          "m": 2,
+          "ruta": "modulo02/05-lista-ordenada",
+          "titulo": "Lista simple ordenada y duplicados"
+        },
+        {
+          "m": 2,
+          "ruta": "modulo02/06-listas-circulares",
+          "titulo": "Lista circular y recorrido completo"
+        },
+        {
+          "m": 2,
+          "ruta": "modulo02/07-listas-dobles",
+          "titulo": "Lista doble y consistencia de enlaces"
+        },
+        {
+          "m": 2,
+          "ruta": "modulo02/08-pila-con-arreglo",
+          "titulo": "Pila con arreglo y capacidad fija"
+        },
+        {
+          "m": 2,
+          "ruta": "modulo02/09-pila-con-nodos",
+          "titulo": "Pila dinámica con nodos"
+        },
+        {
+          "m": 2,
+          "ruta": "modulo02/10-dos-pilas-compartidas",
+          "titulo": "Dos pilas en un arreglo compartido"
+        },
+        {
+          "m": 2,
+          "ruta": "modulo02/11-cola-circular-con-arreglo",
+          "titulo": "Cola circular con arreglo"
+        },
+        {
+          "m": 2,
+          "ruta": "modulo02/12-cola-con-nodos",
+          "titulo": "Cola dinámica con frente y fin"
+        },
+        {
+          "m": 2,
+          "ruta": "modulo02/13-deque-y-aplicaciones",
+          "titulo": "Deque y aplicaciones de pilas y colas"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Recursión y árboles de búsqueda",
+      "path": "modulo03",
+      "lessons": [
+        {
+          "m": 3,
+          "ruta": "modulo03/01-recursividad-y-caso-base",
+          "titulo": "Recursividad, caso base y progreso"
+        },
+        {
+          "m": 3,
+          "ruta": "modulo03/02-arboles-generales",
+          "titulo": "Árboles: conceptos y representación general"
+        },
+        {
+          "m": 3,
+          "ruta": "modulo03/03-arbol-binario-de-busqueda",
+          "titulo": "Árbol binario y árbol binario de búsqueda"
+        },
+        {
+          "m": 3,
+          "ruta": "modulo03/04-recorridos-de-arboles",
+          "titulo": "Preorden, inorden y postorden"
+        },
+        {
+          "m": 3,
+          "ruta": "modulo03/05-buscar-y-eliminar-en-bst",
+          "titulo": "BST: buscar y eliminar"
+        },
+        {
+          "m": 3,
+          "ruta": "modulo03/06-alturas-y-factor-avl",
+          "titulo": "Alturas y factor de balance AVL"
+        },
+        {
+          "m": 3,
+          "ruta": "modulo03/07-rotaciones-simples",
+          "titulo": "Rotaciones simples LL y RR"
+        },
+        {
+          "m": 3,
+          "ruta": "modulo03/08-rotaciones-dobles",
+          "titulo": "Rotaciones dobles LR y RL"
+        },
+        {
+          "m": 3,
+          "ruta": "modulo03/09-insercion-avl",
+          "titulo": "Inserción AVL y retorno recursivo"
+        },
+        {
+          "m": 3,
+          "ruta": "modulo03/10-eliminacion-avl",
+          "titulo": "Eliminación AVL y reparaciones sucesivas"
+        },
+        {
+          "m": 3,
+          "ruta": "modulo03/11-arboles-b",
+          "titulo": "Árboles B: grado mínimo y páginas"
+        },
+        {
+          "m": 3,
+          "ruta": "modulo03/12-insercion-b",
+          "titulo": "Búsqueda, división e inserción en árbol B"
+        },
+        {
+          "m": 3,
+          "ruta": "modulo03/13-eliminacion-b",
+          "titulo": "Eliminación en árbol B: préstamo y fusión"
+        },
+        {
+          "m": 3,
+          "ruta": "modulo03/14-indices-b-mas",
+          "titulo": "Árbol B+: separadores y registros en hojas"
+        },
+        {
+          "m": 3,
+          "ruta": "modulo03/15-rangos-y-eliminacion-b-mas",
+          "titulo": "Rangos y eliminación en B+"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Hashing, prioridad y prefijos",
+      "path": "modulo04",
+      "lessons": [
+        {
+          "m": 4,
+          "ruta": "modulo04/01-colisiones-hash",
+          "titulo": "Hashing: colisiones, sondeo y tumbas"
+        },
+        {
+          "m": 4,
+          "ruta": "modulo04/02-carga-y-eleccion-de-indices",
+          "titulo": "Carga, reconstrucción y elección de índices"
+        },
+        {
+          "m": 4,
+          "ruta": "modulo04/03-igualdad-y-claves",
+          "titulo": "Igualdad, hashCode y claves estables"
+        },
+        {
+          "m": 4,
+          "ruta": "modulo04/04-monticulos",
+          "titulo": "Montículos binarios en arreglos"
+        },
+        {
+          "m": 4,
+          "ruta": "modulo04/05-colas-de-prioridad",
+          "titulo": "Colas de prioridad y ordenación por extracción"
+        },
+        {
+          "m": 4,
+          "ruta": "modulo04/06-trie",
+          "titulo": "Trie y búsqueda por prefijo"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Grafos y algoritmos de conexión",
+      "path": "modulo05",
+      "lessons": [
+        {
+          "m": 5,
+          "ruta": "modulo05/01-conceptos-de-grafos",
+          "titulo": "Grafos: vértices, aristas y caminos"
+        },
+        {
+          "m": 5,
+          "ruta": "modulo05/02-matriz-de-adyacencia",
+          "titulo": "Matriz de adyacencia"
+        },
+        {
+          "m": 5,
+          "ruta": "modulo05/03-listas-de-adyacencia",
+          "titulo": "Listas de adyacencia"
+        },
+        {
+          "m": 5,
+          "ruta": "modulo05/04-incidencia-y-multilistas",
+          "titulo": "Incidencia y multilistas de aristas"
+        },
+        {
+          "m": 5,
+          "ruta": "modulo05/05-dfs",
+          "titulo": "DFS: recorrido en profundidad"
+        },
+        {
+          "m": 5,
+          "ruta": "modulo05/06-bfs-y-ruta-minima",
+          "titulo": "BFS y ruta mínima en número de aristas"
+        },
+        {
+          "m": 5,
+          "ruta": "modulo05/07-componentes-y-comprobacion",
+          "titulo": "Componentes y verificación de recorridos"
+        },
+        {
+          "m": 5,
+          "ruta": "modulo05/08-grafos-ponderados",
+          "titulo": "Grafos ponderados: representación y contrato"
+        },
+        {
+          "m": 5,
+          "ruta": "modulo05/09-frontera-con-prioridad",
+          "titulo": "La frontera de Dijkstra y entradas desactualizadas"
+        },
+        {
+          "m": 5,
+          "ruta": "modulo05/10-dijkstra",
+          "titulo": "Dijkstra: relajación y caminos mínimos"
+        },
+        {
+          "m": 5,
+          "ruta": "modulo05/11-predecesores",
+          "titulo": "Reconstrucción de rutas y vértices inaccesibles"
+        },
+        {
+          "m": 5,
+          "ruta": "modulo05/12-validacion-de-pesos",
+          "titulo": "Pesos negativos, límites y pruebas de rutas"
+        },
+        {
+          "m": 5,
+          "ruta": "modulo05/13-conjuntos-disjuntos",
+          "titulo": "Conjuntos disjuntos: unión y compresión"
+        },
+        {
+          "m": 5,
+          "ruta": "modulo05/14-kruskal",
+          "titulo": "Kruskal y árbol de expansión mínimo"
+        },
+        {
+          "m": 5,
+          "ruta": "modulo05/15-bosques-y-empates",
+          "titulo": "Grafos desconectados y bosques mínimos"
+        },
+        {
+          "m": 5,
+          "ruta": "modulo05/16-ruta-versus-red",
+          "titulo": "Ruta mínima frente a red mínima"
+        },
+        {
+          "m": 5,
+          "ruta": "modulo05/17-floyd-warshall",
+          "titulo": "Floyd–Warshall: programación dinámica"
+        },
+        {
+          "m": 5,
+          "ruta": "modulo05/18-ciclos-negativos",
+          "titulo": "Ciclos negativos y parejas afectadas"
+        },
+        {
+          "m": 5,
+          "ruta": "modulo05/19-seleccion-y-comprobacion",
+          "titulo": "Selección y comprobación de algoritmos de grafos"
+        },
+        {
+          "m": 5,
+          "ruta": "modulo05/20-orden-topologico",
+          "titulo": "Orden topológico y dependencias"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Aplicaciones y proyectos",
+      "path": "modulo06",
+      "lessons": [
+        {
+          "m": 6,
+          "ruta": "modulo06/01-indice-espacial-kd",
+          "titulo": "Índice espacial k-d y vecino cercano"
+        },
+        {
+          "m": 6,
+          "ruta": "modulo06/02-sistemas-geograficos",
+          "titulo": "SIG: geometría, atributos y topología"
+        },
+        {
+          "m": 6,
+          "ruta": "modulo06/03-geojson",
+          "titulo": "GeoJSON: intercambio y validación"
+        },
+        {
+          "m": 6,
+          "ruta": "modulo06/04-procesamiento-en-flujo",
+          "titulo": "Agregación en flujo y memoria por grupos"
+        },
+        {
+          "m": 6,
+          "ruta": "modulo06/05-chatbot-por-estados",
+          "titulo": "Chatbot de consulta con máquina de estados"
+        },
+        {
+          "m": 6,
+          "ruta": "modulo06/06-proyecto-integrador",
+          "titulo": "Proyecto: red, rutas, mapa y conversación"
+        },
+        {
+          "m": 6,
+          "ruta": "modulo06/07-catalogo-e-indice-invertido",
+          "titulo": "Proyecto final: catálogo con índices coherentes"
+        }
+      ]
+    }
+  ]
+}

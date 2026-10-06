@@ -1,0 +1,3 @@
+Suma de grados: 6
+Aristas: 3
+Vértice aislado: true

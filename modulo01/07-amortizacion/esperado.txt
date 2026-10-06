@@ -1,0 +1,1 @@
+tamaño=17, capacidad=32, copias=28

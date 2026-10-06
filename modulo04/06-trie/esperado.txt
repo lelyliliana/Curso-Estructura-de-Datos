@@ -1,0 +1,3 @@
+false
+[casa, casita, caso]
+[casita, caso]
