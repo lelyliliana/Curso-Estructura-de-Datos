@@ -122,3 +122,11 @@ Entrega tu solución, una prueba de escritorio y casos normal, límite e inváli
 
 
 [Inicio](../../README.md) · [Anterior](../../modulo02/11-cola-circular-con-arreglo/README.md) · [Índice](../README.md) · [Siguiente recurso](../../modulo02/13-deque-y-aplicaciones/README.md)
+
+---
+
+### ¿Necesitas apoyo con este tema?
+
+Si te bloqueaste con la práctica, necesitas revisar tu entorno o adaptar lo aprendido a tu proyecto, podemos trabajarlo en una sesión personalizada.
+
+[**Solicitar asesoría para este tema por WhatsApp**](https://wa.me/573103618296?text=Hola%2C%20Leli.%20Estoy%20estudiando%2012%20%C2%B7%20Cola%20din%C3%A1mica%20con%20frente%20y%20fin%20del%20curso%20Estructuras%20de%20Datos%20desde%20los%20fundamentos%20%28https%3A%2F%2Fgithub.com%2Flelyliliana%2FCurso-Estructura-de-Datos%2Fblob%2Fmain%2Fmodulo02%2F12-cola-con-nodos%2FREADME.md%29%20y%20necesito%20una%20asesor%C3%ADa%20personalizada.%20Mi%20duda%20es%E2%80%A6)

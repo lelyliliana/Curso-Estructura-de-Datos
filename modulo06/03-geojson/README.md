@@ -99,3 +99,11 @@ Entrega la entrada utilizada, el resultado esperado y observado, y una explicaci
 
 
 [Inicio](../../README.md) · [Anterior](../../modulo06/02-sistemas-geograficos/README.md) · [Índice](../README.md) · [Siguiente recurso](../../modulo06/04-procesamiento-en-flujo/README.md)
+
+---
+
+### ¿Necesitas apoyo con este tema?
+
+Si te bloqueaste con la práctica, necesitas revisar tu entorno o adaptar lo aprendido a tu proyecto, podemos trabajarlo en una sesión personalizada.
+
+[**Solicitar asesoría para este tema por WhatsApp**](https://wa.me/573103618296?text=Hola%2C%20Leli.%20Estoy%20estudiando%2003%20%C2%B7%20GeoJSON%3A%20intercambio%20y%20validaci%C3%B3n%20del%20curso%20Estructuras%20de%20Datos%20desde%20los%20fundamentos%20%28https%3A%2F%2Fgithub.com%2Flelyliliana%2FCurso-Estructura-de-Datos%2Fblob%2Fmain%2Fmodulo06%2F03-geojson%2FREADME.md%29%20y%20necesito%20una%20asesor%C3%ADa%20personalizada.%20Mi%20duda%20es%E2%80%A6)

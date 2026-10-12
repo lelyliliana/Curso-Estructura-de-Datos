@@ -77,3 +77,11 @@ Debe aparecer exactamente una vez porque el orden incluye todos los vértices. C
 Representa cinco tareas con dos prerrequisitos que converjan en una tercera. Calcula un orden, agrega un ciclo y comprueba el rechazo. Entrega la lista de arcos y la tabla de posiciones para justificar el resultado.
 
 [Anterior](../19-seleccion-y-comprobacion/README.md) · [Índice](../README.md) · [Siguiente recurso](../../modulo06/01-indice-espacial-kd/README.md)
+
+---
+
+### ¿Necesitas apoyo con este tema?
+
+Si te bloqueaste con la práctica, necesitas revisar tu entorno o adaptar lo aprendido a tu proyecto, podemos trabajarlo en una sesión personalizada.
+
+[**Solicitar asesoría para este tema por WhatsApp**](https://wa.me/573103618296?text=Hola%2C%20Leli.%20Estoy%20estudiando%2020%20%C2%B7%20Orden%20topol%C3%B3gico%20y%20dependencias%20del%20curso%20Estructuras%20de%20Datos%20desde%20los%20fundamentos%20%28https%3A%2F%2Fgithub.com%2Flelyliliana%2FCurso-Estructura-de-Datos%2Fblob%2Fmain%2Fmodulo05%2F20-orden-topologico%2FREADME.md%29%20y%20necesito%20una%20asesor%C3%ADa%20personalizada.%20Mi%20duda%20es%E2%80%A6)

@@ -23,3 +23,11 @@ Avanza por los recursos en orden. Calcula los casos a mano, examina código y co
 | 15 | [Rangos y eliminación en B+](15-rangos-y-eliminacion-b-mas/README.md) |
 
 Completa el [taller](../talleres/modulo03.md) y conserva evidencia de entradas, resultados y propiedades comprobadas.
+
+---
+
+### ¿Necesitas apoyo con este tema?
+
+Si te bloqueaste con la práctica, necesitas revisar tu entorno o adaptar lo aprendido a tu proyecto, podemos trabajarlo en una sesión personalizada.
+
+[**Solicitar asesoría para este tema por WhatsApp**](https://wa.me/573103618296?text=Hola%2C%20Leli.%20Estoy%20estudiando%20Recursi%C3%B3n%20y%20%C3%A1rboles%20de%20b%C3%BAsqueda%20del%20curso%20Estructuras%20de%20Datos%20desde%20los%20fundamentos%20%28https%3A%2F%2Fgithub.com%2Flelyliliana%2FCurso-Estructura-de-Datos%2Fblob%2Fmain%2Fmodulo03%2FREADME.md%29%20y%20necesito%20una%20asesor%C3%ADa%20personalizada.%20Mi%20duda%20es%E2%80%A6)
