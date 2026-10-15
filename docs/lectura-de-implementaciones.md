@@ -4,6 +4,10 @@
 
 Las clases de src/curso contienen los algoritmos compartidos. Estudia una operación por vez y relaciona cada asignación con una invariante. Este recorrido resume el orden de las decisiones; consulta los fuentes para los detalles ejecutables.
 
+## Trazas que puedes ejecutar
+
+Los [siete recorridos](../laboratorios/recorridos/README.md) acompañan recursos de fundamentos, colecciones y aplicaciones. Cada uno relaciona la condición comprobada con el dato que cambia: referencia compartida, copias acumuladas, asociación, marca terminal, dependencia o índice. Estudia la traza específica antes de modificar una operación.
+
 ## AVL
 
 insertar y eliminar reciben una raíz de subárbol y devuelven su nueva raíz. Un retorno diferente indica que se creó una hoja, se retiró un nodo o se realizó una rotación. La llamada superior debe asignar ese retorno.

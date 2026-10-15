@@ -17,8 +17,11 @@ def main():
     tests=json.loads((ROOT/"tests/manifest.json").read_text(encoding="utf-8"))
     with tempfile.TemporaryDirectory() as temporal:
         base=Path(temporal);biblioteca=base/"biblioteca";biblioteca.mkdir()
-        compilar_en(biblioteca,sorted((ROOT/"src/curso").glob("*.java"))+[ROOT/"tests/Pruebas.java",ROOT/"tests/Fundamentos.java"])
+        compilar_en(biblioteca,sorted((ROOT/"src/curso").glob("*.java"))+[ROOT/"tests/Pruebas.java",ROOT/"tests/Fundamentos.java",ROOT/"laboratorios/recorridos/Recorridos.java"])
         for clase in ["Pruebas","Fundamentos"]:print(correr(JAVA+["-cp",str(biblioteca),clase],base),end="",flush=True)
+        recorrido=correr(JAVA+["-cp",str(biblioteca),"Recorridos","todos"],base)
+        assert recorrido==(ROOT/"laboratorios/recorridos/esperado.txt").read_text(encoding="utf-8"),"Salida de recorridos guiados"
+        print(recorrido,end="",flush=True)
         geo=json.loads(correr(JAVA+["-cp",str(biblioteca),"Pruebas","--geo"],base))
         assert geo["features"][0]["properties"]["id"]=='Salón "A"\n\\'
         assert geo["features"][0]["geometry"]["coordinates"]==[-75.6,6.2]
@@ -46,7 +49,10 @@ def main():
         print(f"Pruebas por recurso: {len(tests)}",flush=True)
     enlaces=0
     for p in ROOT.rglob("*.md"):
-        s=re.sub(r"```.*?```","",p.read_text(encoding="utf-8"),flags=re.S)
+        texto=p.read_text(encoding="utf-8")
+        assert not re.search(r"\uFFFD|Ã[\x80-\xBF]|Â[\x80-\xBF]|[\uE200\uE201]|contentReference|oaicite|<\|(?:system|assistant|im_start|im_end)\|>",texto),p
+        assert len(re.findall(r"^\s*```",texto,re.M))%2==0,p
+        s=re.sub(r"```.*?```","",texto,flags=re.S)
         assert "<!-- RESULTADO -->" not in s,p
         for destino in re.findall(r"\[[^\]]*\]\(([^)]+)\)",s):
             if re.match(r"[A-Za-z][A-Za-z0-9+.-]*:",destino) or destino.startswith("#"):continue

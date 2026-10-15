@@ -25,7 +25,6 @@ Avanza por los recursos en orden. Calcula los casos a mano, examina código y co
 | 17 | [Floyd–Warshall: programación dinámica](17-floyd-warshall/README.md) |
 | 18 | [Ciclos negativos y parejas afectadas](18-ciclos-negativos/README.md) |
 | 19 | [Selección y comprobación de algoritmos de grafos](19-seleccion-y-comprobacion/README.md) |
-
 | 20 | [Orden topológico y dependencias](20-orden-topologico/README.md) |
 
 Completa el [taller](../talleres/modulo05.md) y conserva evidencia de entradas, resultados y propiedades comprobadas.

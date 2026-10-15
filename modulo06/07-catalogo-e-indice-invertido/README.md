@@ -2,6 +2,8 @@
 
 [Inicio](../../README.md) · [Anterior](../../modulo06/06-proyecto-integrador/README.md) · [Índice](../README.md) · [Siguiente recurso](../../proyecto/README.md)
 
+[Desarrollo y traza del caso](DESARROLLO.md) · [Recorridos ejecutables](../../laboratorios/recorridos/README.md)
+
 ## Objetivo
 
 Integrar secuencias, mapas ordenados, conjuntos y un índice invertido con carga validada.
@@ -134,18 +136,22 @@ Agrega un libro con dos palabras que empiecen por arb y comprueba una sola apari
 
 <details><summary>Contrastar la solución</summary>
 
-El conjunto de IDs deduplica coincidencias. Tras cargar, todos los registros y prefijos deben coincidir. Después de eliminar, verificar reconstruye el índice y detecta asociaciones sobrantes. Un archivo con ID repetido se rechaza.
+El prefijo arb encuentra arboles y arbustos. Ambos pueden contener el mismo ID; el conjunto de resultados deduplica antes de recuperar los libros. Para 1 «Árboles arbustos» y 3 «Árboles balanceados», se devuelve [1,3] y el título original conserva sus acentos.
+
+Después de eliminar 1, arboles conserva {3}, arbustos se retira si queda sin IDs y la consulta devuelve [3]. verificar reconstruye el índice esperado y detecta asociaciones faltantes o sobrantes.
+
+Una carga con ID 9 repetido se rechaza aunque la primera fila haya sido válida. La asignación del menú ocurre solo después de recibir el candidato completo; el catálogo activo anterior conserva registros y no incorpora parcialmente 9. Esto no convierte guardar en una escritura atómica ni agrega transacciones al archivo. El recorrido utiliza archivos temporales propios para contrastar ambas garantías.
 
 </details>
 
-## Práctica y evidencia
+## Práctica paso a paso
 
-1. Reproduce la entrada original y justifica cada resultado.
-2. Resuelve el ejercicio antes de desplegar la solución.
-3. Agrega una ausencia, un empate o una entrada inválida pertinente al contrato.
-4. Comprueba una propiedad que pueda fallar aunque la salida parezca correcta.
+1. Agrega los libros 1 «Árboles arbustos» y 3 «Árboles balanceados». Escribe las asociaciones de arboles y arbustos y predice arb sin repetir IDs.
+2. Elimina 1, comprueba los dos índices con verificar y consulta otra vez. Conserva el título original con acento en una prueba de guardar/cargar.
+3. Prepara un archivo de candidato con cabecera válida y dos filas con el mismo ID. Explica cuándo debe asignarse al catálogo activo y qué debe conservarse si falla.
+4. Ejecuta `python scripts/recorridos.py catalogo`. Comprueba que el ID de la carga inválida no aparezca parcialmente y que una consulta vacía o de dos palabras se rechace.
 
-Entrega entrada, resultado esperado y observado, y análisis del costo. Si cambias la implementación, ejecuta las [pruebas](../../tests/README.md).
+Entrega la tabla de asociaciones antes/después y diferencia validación completa de carga, escritura directa y persistencia transaccional. Consulta el [desarrollo](DESARROLLO.md).
 
 [Inicio](../../README.md) · [Anterior](../../modulo06/06-proyecto-integrador/README.md) · [Índice](../README.md) · [Siguiente recurso](../../proyecto/README.md)
 

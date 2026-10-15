@@ -2,6 +2,8 @@
 
 [Inicio](../../README.md) · [Anterior](../19-seleccion-y-comprobacion/README.md) · [Índice](../README.md) · [Siguiente recurso](../../modulo06/01-indice-espacial-kd/README.md)
 
+[Desarrollo y traza del caso](DESARROLLO.md) · [Recorridos ejecutables](../../laboratorios/recorridos/README.md)
+
 ## Objetivo
 
 Ordenar tareas respetando sus dependencias y detectar cuándo un ciclo impide obtener un orden completo.
@@ -68,13 +70,22 @@ Agrega un vértice 4 aislado al grafo original sin el ciclo. ¿Debe aparecer en 
 
 <details><summary>Solución</summary>
 
-Debe aparecer exactamente una vez porque el orden incluye todos los vértices. Con este desempate queda [0,1,2,3,4]. Para cada u→v verifica posición(u)<posición(v). No exijas conexiones entre posiciones consecutivas.
+El vértice 4 aislado debe aparecer exactamente una vez. Con prioridad por número y los arcos originales, el orden es [0,1,2,3,4]. Para cada u→v comprueba posición(u)<posición(v), sin exigir un arco entre todas las posiciones consecutivas.
+
+En la variante con arcos paralelos, el grado de 2 empieza en 3. Retirar 0 descuenta dos, y retirar 1 descuenta el tercero; 2 entra una vez en la frontera. El aislado sigue incluido.
+
+Con 0→1, 1→0 y 1→2, el vértice 2 queda bloqueado pero no está dentro del ciclo 0↔1. Un recorrido parcial no permite etiquetar como cíclico a todo vértice pendiente. El método detecta imposibilidad de orden completo y rechaza; no entrega un listado de componentes cíclicas.
 
 </details>
 
-## Práctica
+## Práctica paso a paso
 
-Representa cinco tareas con dos prerrequisitos que converjan en una tercera. Calcula un orden, agrega un ciclo y comprueba el rechazo. Entrega la lista de arcos y la tabla de posiciones para justificar el resultado.
+1. Construye cinco vértices, dos arcos 0→2, uno 1→2 y uno 2→3. Calcula grados y frontera después de cada extracción; incluye el aislado 4.
+2. Para el orden obtenido, escribe la posición de cada vértice y comprueba cada arco, incluidos los paralelos.
+3. Dibuja 0→1, 1→0 y 1→2, más el aislado 3. Explica por qué 2 queda bloqueado sin pertenecer al ciclo.
+4. Ejecuta `python scripts/recorridos.py topologico`. Contrasta también DAG vacío, lazo y grafo no dirigido. No presentes una lista parcial como solución completa.
+
+Entrega ambas listas de arcos, tablas de grados/posiciones y la diferencia entre detectar un ciclo y enumerar sus miembros. Consulta el [desarrollo](DESARROLLO.md).
 
 [Anterior](../19-seleccion-y-comprobacion/README.md) · [Índice](../README.md) · [Siguiente recurso](../../modulo06/01-indice-espacial-kd/README.md)
 

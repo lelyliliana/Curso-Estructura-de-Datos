@@ -2,6 +2,8 @@
 
 [Inicio](../../README.md) · [Anterior](../../modulo01/06-complejidad/README.md) · [Índice](../README.md) · [Siguiente recurso](../../modulo01/08-contratos-e-invariantes/README.md)
 
+[Desarrollo y traza del caso](DESARROLLO.md) · [Recorridos ejecutables](../../laboratorios/recorridos/README.md)
+
 ## Objetivo
 
 Distribuir las copias de ampliación entre una secuencia de inserciones sin prometer costo constante individual.
@@ -65,18 +67,22 @@ Predice capacidad y copias para 9,16 y 17 agregados. ¿Por qué el salto ocurre 
 
 <details><summary>Contrastar la solución</summary>
 
-9: capacidad16 y copias12. 16: capacidad16 y copias12. 17: capacidad32 y copias28. La posición 16 es la primera que no cabe en un arreglo de longitud16.
+Con 9 agregados, capacidad 16 y copias acumuladas 12. Con 16, se conservan esos mismos valores. El agregado número 17 exige ampliar a 32: copia 16 referencias nuevas y lleva el contador acumulado a 28. Su costo en el modelo es 16 copias + 1 escritura, no 28 + 1.
+
+Para toda la secuencia de 17, el trabajo modelado es 17 escrituras + 28 copias = 45. Ese total lineal sustenta el costo amortizado constante de agregar al final; no convierte cada operación individual en constante.
+
+Tras eliminar 16 elementos quedan tamaño 1, capacidad 32 y copias 28. La siguiente frontera de crecimiento ocurre al agregar el elemento 33: capacidad 64 y copias acumuladas 4+8+16+32=60. Los desplazamientos de insertar en medio no están incluidos en copias y conservan su costo lineal.
 
 </details>
 
-## Práctica y evidencia
+## Práctica paso a paso
 
-1. Reproduce la entrada original y justifica cada resultado.
-2. Resuelve el ejercicio antes de desplegar la solución.
-3. Agrega una ausencia, un empate o una entrada inválida pertinente al contrato.
-4. Comprueba una propiedad que pueda fallar aunque la salida parezca correcta.
+1. Completa la tabla para tamaños 4, 5, 8, 9, 16 y 17: capacidad, copias acumuladas y copias del último agregado. No ejecutes todavía.
+2. Calcula 17 escrituras más 28 copias y explica por qué el total no significa que cada agregado costara 45.
+3. Predice tamaño/capacidad después de eliminar 16 elementos del final. Comprueba la región activa.
+4. Ejecuta `python scripts/recorridos.py amortizacion` y justifica cada salto. En una copia propia prueba la siguiente frontera, 33, y deriva el resultado antes de ejecutar.
 
-Entrega entrada, resultado esperado y observado, y análisis del costo. Si cambias la implementación, ejecuta las [pruebas](../../tests/README.md).
+Entrega la cuenta de una operación, la cuenta acumulada y el análisis de memoria retenida. El [desarrollo](DESARROLLO.md) define el modelo de costo.
 
 [Inicio](../../README.md) · [Anterior](../../modulo01/06-complejidad/README.md) · [Índice](../README.md) · [Siguiente recurso](../../modulo01/08-contratos-e-invariantes/README.md)
 

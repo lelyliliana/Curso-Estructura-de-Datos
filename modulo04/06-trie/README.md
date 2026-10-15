@@ -2,6 +2,8 @@
 
 [Inicio](../../README.md) · [Anterior](../../modulo04/05-colas-de-prioridad/README.md) · [Índice](../README.md) · [Siguiente recurso](../../modulo05/01-conceptos-de-grafos/README.md)
 
+[Desarrollo y traza del caso](DESARROLLO.md) · [Recorridos ejecutables](../../laboratorios/recorridos/README.md)
+
 ## Objetivo
 
 Separar fin de palabra de existencia de un camino y retirar claves sin borrar prefijos compartidos.
@@ -69,18 +71,22 @@ Agrega cas y elimina casita. ¿Qué consultas por igualdad y prefijo deben cambi
 
 <details><summary>Contrastar la solución</summary>
 
-cas pasa a ser una palabra válida. casita deja de existir y sus nodos exclusivos se podan. El prefijo cas conserva cas y caso; los enlaces comunes no se eliminan.
+Después del ejemplo original, agrega cas y elimina casita: cas pasa a ser terminal y el prefijo conserva cas y caso. Si ejecutas la variante ampliada que también conserva casa, la lista final será cas, casa y caso. El resultado depende del conjunto de partida, no de un orden distinto del trie.
+
+En el recorrido automático se insertan las cuatro palabras y primero se elimina cas: quedan casa, casita y caso. Después se elimina casita: quedan casa y caso. Solo desaparece el tramo exclusivo de casita; el camino cas sigue sosteniendo otras palabras.
+
+Agregar la cadena vacía marca la raíz. Retirarla desmarca esa raíz y conserva sus hijos. El límite 80 se acepta; 81, mayúsculas y acentos se rechazan según el contrato ASCII. La enumeración debe pagar el texto que devuelve, además de bajar al prefijo.
 
 </details>
 
-## Práctica y evidencia
+## Práctica paso a paso
 
-1. Reproduce la entrada original y justifica cada resultado.
-2. Resuelve el ejercicio antes de desplegar la solución.
-3. Agrega una ausencia, un empate o una entrada inválida pertinente al contrato.
-4. Comprueba una propiedad que pueda fallar aunque la salida parezca correcta.
+1. Inserta cas, casa, casita y caso. Marca cuáles nodos representan una palabra completa y cuáles solo un camino.
+2. Elimina cas y después casita. Predice la lista de prefijo cas tras cada cambio y señala los enlaces que podrían podarse.
+3. Agrega la palabra vacía, consulta contiene vacío y prefijo vacío; después elimínala. Distingue cadena vacía de lista vacía.
+4. Ejecuta `python scripts/recorridos.py trie`. Prueba longitud 80, longitud 81, mayúsculas y un acento. Comprueba que los rechazos no destruyan las palabras anteriores.
 
-Entrega entrada, resultado esperado y observado, y análisis del costo. Si cambias la implementación, ejecuta las [pruebas](../../tests/README.md).
+Entrega terminales, enlaces conservados y costo de enumerar. El [desarrollo](DESARROLLO.md) incluye el esquema de la rama compartida.
 
 [Inicio](../../README.md) · [Anterior](../../modulo04/05-colas-de-prioridad/README.md) · [Índice](../README.md) · [Siguiente recurso](../../modulo05/01-conceptos-de-grafos/README.md)
 

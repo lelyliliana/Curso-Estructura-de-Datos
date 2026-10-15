@@ -32,7 +32,7 @@ Los módulos 1–5 forman el núcleo. El módulo 6 aplica las estructuras a cons
 5. Resuelve el ejercicio antes de desplegar la solución. Agrega un caso límite y explica su resultado.
 6. Sigue el enlace Siguiente recurso y completa el taller del módulo.
 
-Cada lección incluye anterior, índice y siguiente. No necesitas aprender a explorar carpetas de GitHub para seguir la secuencia. La [lectura de implementaciones](docs/lectura-de-implementaciones.md) ayuda a conectar las asignaciones con las invariantes.
+Cada lección incluye anterior, índice y siguiente. No necesitas aprender a explorar carpetas de GitHub para seguir la secuencia. La [lectura de implementaciones](docs/lectura-de-implementaciones.md) ayuda a conectar las asignaciones con las invariantes. Los [siete recorridos ejecutables](laboratorios/recorridos/README.md) desarrollan copias, amortización, elección de colecciones, claves, trie, orden topológico y carga de catálogo mediante trazas y comprobaciones específicas.
 
 ## Contenido y garantías
 
@@ -53,7 +53,7 @@ El análisis separa tiempo y memoria, peor caso, costo esperado y amortizado. La
 
 ## Material de apoyo
 
-[Comparaciones](docs/comparaciones.md) · [Glosario](docs/glosario.md) · [Contratos y pruebas](docs/contratos-y-pruebas.md) · [Referencias](docs/referencias.md) · [Ejecutar comprobaciones](tests/README.md)
+[Comparaciones](docs/comparaciones.md) · [Glosario](docs/glosario.md) · [Contratos y pruebas](docs/contratos-y-pruebas.md) · [Referencias](docs/referencias.md) · [Ejecutar comprobaciones](tests/README.md) · [Resultados y alcance de esta revisión](docs/verificacion.md)
 
 Las demostraciones son locales y reproducibles. Los árboles B/B+ están en memoria, las coordenadas y redes son ficticias y los archivos se escriben directamente. Cada recurso indica su dominio y límites. No se exige una única forma de árbol ni una única ruta cuando varias satisfacen el mismo contrato.
 

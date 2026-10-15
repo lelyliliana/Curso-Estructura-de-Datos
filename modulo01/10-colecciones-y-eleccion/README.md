@@ -2,6 +2,8 @@
 
 [Inicio](../../README.md) · [Anterior](../../modulo01/09-busqueda-binaria/README.md) · [Índice](../README.md) · [Siguiente recurso](../../modulo02/01-nodo-simple/README.md)
 
+[Desarrollo y traza del caso](DESARROLLO.md) · [Recorridos ejecutables](../../laboratorios/recorridos/README.md)
+
 ## Objetivo
 
 Distinguir secuencia, pertenencia y asociación y especificar orden y duplicados.
@@ -71,18 +73,22 @@ Elige estructura para historial de eventos, códigos únicos y correo por usuari
 
 <details><summary>Contrastar la solución</summary>
 
-Historial: secuencia; códigos: conjunto; correo por usuario: mapa. El historial conserva eventos repetidos y su orden. El contrato debe decidir si un usuario puede tener varios correos o un único valor asociado.
+Historial: [3,1,3], tres eventos y dos apariciones de 3. Códigos únicos ordenados: [1,3]. Frecuencias: {1=1,3=2}. El conjunto por sí solo no conserva los conteos originales.
+
+Para correo por usuario, el segundo put sobre u7 devuelve primero, deja actual como valor vigente y mantiene tamaño 1. Si el requisito admite varios correos o necesita historial, cambia el contrato del valor asociado.
+
+sol y mar tienen longitud 3: el comparador devuelve cero y TreeSet conserva una sola representación. Para ordenar por longitud sin fusionar palabras distintas puedes desempatar por el texto completo. No esperes que HashSet imprima un orden ni que Map guarde automáticamente valores anteriores.
 
 </details>
 
-## Práctica y evidencia
+## Práctica paso a paso
 
-1. Reproduce la entrada original y justifica cada resultado.
-2. Resuelve el ejercicio antes de desplegar la solución.
-3. Agrega una ausencia, un empate o una entrada inválida pertinente al contrato.
-4. Comprueba una propiedad que pueda fallar aunque la salida parezca correcta.
+1. Con [3,1,3], escribe qué obtendría un historial, un conjunto ordenado y un mapa de frecuencias. Señala qué información se pierde al convertir a conjunto.
+2. Actualiza dos veces el correo de un usuario y registra tamaño, valor vigente y valor anterior devuelto por put.
+3. Inserta sol y mar en un TreeSet comparado solo por longitud. Explica el resultado sin llamarlo colisión hash.
+4. Ejecuta `python scripts/recorridos.py colecciones`. Propón un comparador que mantenga palabras distintas con igual longitud y un caso que falle si no desempatara por contenido.
 
-Entrega entrada, resultado esperado y observado, y análisis del costo. Si cambias la implementación, ejecuta las [pruebas](../../tests/README.md).
+Entrega necesidad, representación, información conservada y garantía de orden. Consulta el [desarrollo](DESARROLLO.md).
 
 [Inicio](../../README.md) · [Anterior](../../modulo01/09-busqueda-binaria/README.md) · [Índice](../README.md) · [Siguiente recurso](../../modulo02/01-nodo-simple/README.md)
 

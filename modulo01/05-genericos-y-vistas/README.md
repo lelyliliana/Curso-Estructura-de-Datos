@@ -2,6 +2,8 @@
 
 [Inicio](../../README.md) · [Anterior](../../modulo01/04-arreglo-dinamico/README.md) · [Índice](../README.md) · [Siguiente recurso](../../modulo01/06-complejidad/README.md)
 
+[Desarrollo y traza del caso](DESARROLLO.md) · [Recorridos ejecutables](../../laboratorios/recorridos/README.md)
+
 ## Objetivo
 
 Reutilizar una estructura con tipos diferentes y distinguir copia de colección de copia de objetos.
@@ -74,18 +76,22 @@ Usa un objeto mutable como elemento y modifica un campo después de copiar. Expl
 
 <details><summary>Contrastar la solución</summary>
 
-La referencia al objeto se comparte, por lo que su cambio se observa desde ambos contenedores. Un record cuyos componentes sean valores inmutables permite una vista más segura; un record con una lista mutable no garantiza inmutabilidad profunda.
+La copia conserva la misma ficha, de modo que cambiar su nombre a B se observa desde ambos contenedores. Agregar D solo cambia las posiciones del vector. Reemplazar su posición 0 por una nueva ficha C deja la referencia anterior B dentro de la copia.
+
+Resultado final: copia=[B], vector=[C, D]. El intento de add a la copia se rechaza; el intento de agregar null no debe aumentar el tamaño del vector. Esas dos garantías no impiden mutar una ficha compartida.
+
+Un record con componentes inmutables es una alternativa para representar un valor estable. Si contiene una lista mutable, todavía debes decidir si copiarla y cómo proteger sus elementos. El [recorrido](../../laboratorios/recorridos/README.md) distingue estas operaciones con comprobaciones de identidad, tamaño y rechazo.
 
 </details>
 
-## Práctica y evidencia
+## Práctica paso a paso
 
-1. Reproduce la entrada original y justifica cada resultado.
-2. Resuelve el ejercicio antes de desplegar la solución.
-3. Agrega una ausencia, un empate o una entrada inválida pertinente al contrato.
-4. Comprueba una propiedad que pueda fallar aunque la salida parezca correcta.
+1. Crea una ficha mutable A, agrégala al vector y conserva copia(). Predice identidad de los elementos y tamaño de ambos contenedores.
+2. Cambia A a B, agrega D al vector y después reemplaza su primera posición por C. Dibuja las referencias después de cada paso.
+3. Intenta copia.add y un agregado null al vector. Comprueba rechazo y estado posterior.
+4. Ejecuta `python scripts/recorridos.py copias` y contrasta la tabla del [desarrollo](DESARROLLO.md). Entrega una explicación de por qué la copia termina en [B] mientras el vector termina en [C, D].
 
-Entrega entrada, resultado esperado y observado, y análisis del costo. Si cambias la implementación, ejecuta las [pruebas](../../tests/README.md).
+No describas como copia profunda una operación que solo duplicó referencias. Ejecuta las [pruebas completas](../../tests/README.md) si modificas el contrato.
 
 [Inicio](../../README.md) · [Anterior](../../modulo01/04-arreglo-dinamico/README.md) · [Índice](../README.md) · [Siguiente recurso](../../modulo01/06-complejidad/README.md)
 

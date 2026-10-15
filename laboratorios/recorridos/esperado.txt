@@ -1,0 +1,48 @@
+
+Tema: copias
+copia=[B], vector=[C, D]
+Contenedor no modificable; elemento compartido mutable.
+Comprobaciones del tema: 7
+
+Tema: amortizacion
+n | capacidad | copias acumuladas | escritura + copias del agregado
+4 | 4 | 0 | 1
+5 | 8 | 4 | 5
+8 | 8 | 4 | 1
+9 | 16 | 12 | 9
+16 | 16 | 12 | 1
+17 | 32 | 28 | 17
+Tras eliminar 16: tamaño=1, capacidad=32, copias=28
+Comprobaciones del tema: 24
+
+Tema: colecciones
+historial=[3, 1, 3], únicos=[1, 3], frecuencias={1=1, 3=2}
+correo={u7=actual}, valor anterior=primero
+Por longitud: [sol]; agregar mar=false
+Comprobaciones del tema: 4
+
+Tema: claves
+Mismo hash; id7=actual, id8=otro, tamaño=2
+Nombre editable: Ana María
+Comprobaciones del tema: 5
+
+Tema: trie
+Eliminar cas: ['casa', 'casita', 'caso']
+Eliminar casita: ['casa', 'caso']
+Agregar palabra vacía: ['', 'casa', 'caso']
+ASCII y límite 80 comprobados; quedan ['casa', 'caso']
+Comprobaciones del tema: 10
+
+Tema: topologico
+Paralelos + aislado: [0, 1, 2, 3, 4]
+Ciclo 0-1; 2 bloqueado sin pertenecer al ciclo; 3 aislado. Orden completo rechazado.
+Vacío, dirección y lazo comprobados.
+Comprobaciones del tema: 10
+
+Tema: catalogo
+Prefijo ÁRB: [1, 3]; título original=Árboles arbustos
+Después de cargar y eliminar 1: [3]
+Archivo duplicado rechazado; catálogo activo conservado sin id9.
+Comprobaciones del tema: 9
+
+Recorridos: 7; comprobaciones: 69

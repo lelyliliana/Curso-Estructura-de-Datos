@@ -2,6 +2,8 @@
 
 [Inicio](../../README.md) · [Anterior](../../modulo04/02-carga-y-eleccion-de-indices/README.md) · [Índice](../README.md) · [Siguiente recurso](../../modulo04/04-monticulos/README.md)
 
+[Desarrollo y traza del caso](DESARROLLO.md) · [Recorridos ejecutables](../../laboratorios/recorridos/README.md)
+
 ## Objetivo
 
 Definir claves cuya igualdad y hash permanezcan coherentes durante su pertenencia a un mapa.
@@ -74,18 +76,22 @@ Diseña una clave para estudiante con ID estable y nombre editable. ¿Debe el no
 
 <details><summary>Contrastar la solución</summary>
 
-Si la identidad la define el ID, la clave utiliza únicamente ese ID inmutable. El nombre permanece en el valor y puede editarse sin alterar la localización de la asociación.
+Si la identidad la define el ID, la clave usa únicamente ese valor estable; el nombre editable pertenece al valor asociado. Cambiar Ana a Ana María no cambia dónde se busca Id(7).
+
+Dos Id(7) son iguales aunque no sean el mismo objeto y actualizan una asociación. Id(8) puede tener el mismo hash sin ser igual: el mapa conserva las dos claves lógicas y debe recuperar actual para 7 y otro para 8. El tamaño final es 2.
+
+El recorrido fuerza una colisión con un hash constante para observar esa diferencia. No prueba rendimiento constante. Tampoco promete un resultado específico después de mutar una clave afectando equals, porque ese uso queda fuera del comportamiento especificado por Map.
 
 </details>
 
-## Práctica y evidencia
+## Práctica paso a paso
 
-1. Reproduce la entrada original y justifica cada resultado.
-2. Resuelve el ejercicio antes de desplegar la solución.
-3. Agrega una ausencia, un empate o una entrada inválida pertinente al contrato.
-4. Comprueba una propiedad que pueda fallar aunque la salida parezca correcta.
+1. Define una clave por ID inmutable y crea dos instancias iguales y una distinta. Compara ==, equals y hashCode.
+2. Fuerza una colisión válida mediante un hash constante y registra el resultado de poner las tres claves. Comprueba ambos valores con nuevas instancias iguales.
+3. Guarda el nombre editable en el valor y cámbialo sin modificar la clave. Consulta otra vez por ID.
+4. Ejecuta `python scripts/recorridos.py claves` y explica por qué un hash constante conserva corrección, pero no una buena distribución. No exijas una salida concreta después de violar el contrato con una clave mutable.
 
-Entrega entrada, resultado esperado y observado, y análisis del costo. Si cambias la implementación, ejecuta las [pruebas](../../tests/README.md).
+Entrega la tabla de asociaciones y el criterio de identidad. Consulta el [desarrollo](DESARROLLO.md).
 
 [Inicio](../../README.md) · [Anterior](../../modulo04/02-carga-y-eleccion-de-indices/README.md) · [Índice](../README.md) · [Siguiente recurso](../../modulo04/04-monticulos/README.md)
 
